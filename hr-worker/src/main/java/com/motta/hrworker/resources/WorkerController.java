@@ -36,11 +36,11 @@ public class WorkerController {
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
 
 //        Teste de espera
-//        try {
-//            Thread.sleep(3000L);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         logger.info("PORT = " + env.getProperty("local.server.port"));
 
