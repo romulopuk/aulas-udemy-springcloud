@@ -18,7 +18,7 @@ public class UserService {
     public User findByEmail(String email) {
         User user = userFeignClient.findByEmail(email).getBody();
         if (user == null) {
-            logger.error("Email not found: " + email);
+            logger.error("-- Email not found: " + email);
             throw new IllegalArgumentException("Email not found");
         }
         logger.info("Email found: " + email);
